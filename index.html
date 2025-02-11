@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBattle Arena</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header__container">
+                <a href="#!" class="logo">
+                    <svg class="logo__icon" width="108" height="38" viewBox="0 0 108 38">
+                        <use href="images/social/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="burger" id="burger">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active">Игроки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Команды</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="welcome section">
+                <div class="container welcome__container">
+                    <div class="welcome__desc">
+                        <h1 class="title">Турнир <br> начинается </h1>
+                        <div class="welcome__date">1 марта 2025 года</div>
+                        <a href="#!" class="welcome-link">Регистрация</a>
+                    </div>
+                    <img src="./images/welcome-img.png" alt="" class="welcome__img">
+                </div>
+            </section>
+            <section class="about section">
+                <div class="container about__container">
+                    <h2 class="section-title">О турнире</h2>
+                    <p class="content-text about__desc">
+                        GameBattle Arena — это масштабное соревнование для любителей видеоигр. Покажи свои навыки,
+                        сражайся с лучшими и побеждай!
+                    </p>
+                    <div class="about__images">
+                        <img class="about__img" src="./images/about1.jpg" alt="Games">
+                        <img class="about__img" src="./images/about2.jpg" alt="Games">
+                    </div>
+                </div>
+            </section>
+            <section class="games">
+                <div class="container games__container">
+                    <h2 class="section-title">Игры турнира</h2>
+                    <p class="content-text games__content-text">
+                        Выбери свою игру и вступай в бой!
+                    </p>
+                    <div class="games-carousel">
+                        <div class="games-carousel__inner">
+                            <a href="#" class="game-link">
+                                <img src="images/games_gallery/CS.jpg" alt="CS">
+                                <div class="game-link__desc">
+                                    Counter-Strike: <br> Global Offensive
+                                </div>
+                            </a>
+                            <a href="#" class="game-link active">
+                                <img src="images/games_gallery/League-of-Legends.jpg" alt="League of Legends">
+                                <div class="game-link__desc">
+                                    League <br> of Legends
+                                </div>
+                            </a>
+                            <a href="#" class="game-link">
+                                <img src="images/games_gallery/minecraft.jpg" alt="Minecraft Build Battle">
+                                <div class="game-link__desc">
+                                    Minecraft: <br> Build Battle
+                                </div>
+                            </a>
+                            <a href="#" class="game-link">
+                                <img src="images/games_gallery/Fortnite.jpg" alt="Fortnite">
+                                <div class="game-link__desc">
+                                    Fortnite
+                                </div>
+                            </a>
+                        </div>
+                        <div class="games-carousel__controls">
+                            <button class="games-carousel__control games-carousel__control--prev">
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.72242 14.7224L2.00002 8L8.72242 1.2776" stroke="white"
+                                        stroke-width="2.1438" />
+                                </svg>
+                            </button>
+                            <div class="games-carousel__indicators">
+                                <span class="games-carousel__indicator" data-index="0"></span>
+                                <span class="games-carousel__indicator active" data-index="1"></span>
+                                <span class="games-carousel__indicator" data-index="2"></span>
+                                <span class="games-carousel__indicator" data-index="3"></span>
+                            </div>
+                            <button class="games-carousel__control games-carousel__control--next">
+                                <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.7224 14.7224L8.44481 8L1.7224 1.2776" stroke="white"
+                                        stroke-width="2.1438" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section shedule">
+                <div class="container shedule__container">
+                    <h2 class="section-title">Расписание</h2>
+                    <div class="events">
+                        <ul class="events__list">
+                            <li class="event">
+                                <img src="./images/shedule/mouse.png" alt="">
+                                <div class="event__info">
+                                    <div class="event__date">3 марта</div>
+                                    <div class="event__name">Командные матчи</div>
+                                </div>
+                            </li>
+                            <li class="event">
+                                <img src="./images/shedule/ВР.png" alt="">
+                                <div class="event__info">
+                                    <div class="event__date">10 марта</div>
+                                    <div class="event__name">Полуфиналы</div>
+                                </div>
+                            </li>
+                            <li class="event">
+                                <img src="./images/shedule/console.png" alt="">
+                                <div class="event__info">
+                                    <div class="event__date">15 марта</div>
+                                    <div class="event__name">Гранд-финал</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section form-section">
+                <div class="container form-section__container">
+                    <header class="form__header">
+                        <h2 class="form-section__title">Присоединяйся <br> к турниру!</h2>
+                        <img src="./images/form-decor.png" alt="" class="form__img-decor">
+                    </header>
+                    <form action="" class="form">
+                        <div class="form__content">
+                            <input type="text" class="form__input" name="name" placeholder="Имя">
+                            <input type="text" class="form__input" name="nickname" placeholder="Никнейм">
+                            <input type="text" class="form__input" name="email" placeholder="Почта">
+                            <button class="form__btn">Оставить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="section questions">
+                <div class="container questions-container">
+                    <h2 class="section-title questions__title">Часто задаваемые вопросы</h2>
+                    <ul class="questions__list questions-accordion">
+                        <li class="questions-accordion__item">
+                            <div class="questions-accordion__header">
+                                <p>Как зарегистрироваться?</p>
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0862 1.45287L8.36377 8.17528L1.64136 1.45287" stroke="#00369B"
+                                        stroke-width="2.1438" />
+                                </svg>
+                            </div>
+                            <div class="questions-accordion__content">
+                                Заполните заявку и нажмите кнопку “Оставить заявку”, менеджер свяжется с Вами
+                            </div>
+                        </li>
+                        <li class="questions-accordion__item">
+                            <div class="questions-accordion__header">
+                                <p>Какие игры участвуют в турнире?</p>
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0862 1.45287L8.36377 8.17528L1.64136 1.45287" stroke="#00369B"
+                                        stroke-width="2.1438" />
+                                </svg>
+                            </div>
+                            <div class="questions-accordion__content">
+                                Заполните заявку и нажмите кнопку “Оставить заявку”, менеджер свяжется с Вами
+                            </div>
+                        </li>
+                        <li class="questions-accordion__item">
+                            <div class="questions-accordion__header">
+                                <p>Есть ли призы?</p>
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0862 1.45287L8.36377 8.17528L1.64136 1.45287" stroke="#00369B"
+                                        stroke-width="2.1438" />
+                                </svg>
+                            </div>
+                            <div class="questions-accordion__content">
+                                Заполните заявку и нажмите кнопку “Оставить заявку”, менеджер свяжется с Вами
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__content">
+                        <a href="" class="logo">
+                            <svg class="logo__icon" width="108" height="38" viewBox="0 0 108 38">
+                                <use href="images/social/sprite.svg#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="footer__content-center">
+                            <nav class="nav footer__nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">Главная</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link active">Игроки</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">Команды</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">О нас</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul class="social-list">
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <svg class="social-icon" width="26" height="25" viewBox="0 0 26 25">
+                                            <use href="images/social/sprite.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a href="#" class="social-link">
+                                        <svg class="social-icon" width="26" height="25" viewBox="0 0 26 25">
+                                            <use href="images/social/sprite.svg#discord"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact">
+                            <a href="mailto:support@gamebattlearena.com"
+                                class="contact__email">support@gamebattlearena.com</a>
+                            <a href="tel:+79001234567" class="contact__phone">+7 (900) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">© 2025 GameBattle Arena. Все права защищены.</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
