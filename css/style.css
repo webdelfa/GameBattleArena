@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.fixed {
+    position: fixed;
+}
+
 .logo {
     flex: 0 0 108px;
 }

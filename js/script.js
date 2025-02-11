@@ -160,4 +160,5 @@ const header = document.querySelector('.header');
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
     navMenu.classList.toggle('active');
+    header.classList.toggle('fixed');
 });
