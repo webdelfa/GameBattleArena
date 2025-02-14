@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameBattle Arena</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/style.css">
@@ -74,31 +75,55 @@
                         Выбери свою игру и вступай в бой!
                     </p>
                     <div class="games-carousel">
-                        <div class="games-carousel__inner">
-                            <a href="#" class="game-link">
+                        <div class="games-carousel__inner swiper-wrapper">
+                            <a href="#" class="game-link swiper-slide">
                                 <img src="images/games_gallery/CS.jpg" alt="CS">
                                 <div class="game-link__desc">
                                     Counter-Strike: <br> Global Offensive
                                 </div>
                             </a>
-                            <a href="#" class="game-link active">
+                            <a href="#" class="game-link swiper-slide active">
                                 <img src="images/games_gallery/League-of-Legends.jpg" alt="League of Legends">
                                 <div class="game-link__desc">
                                     League <br> of Legends
                                 </div>
                             </a>
-                            <a href="#" class="game-link">
+                            <a href="#" class="game-link swiper-slide">
                                 <img src="images/games_gallery/minecraft.jpg" alt="Minecraft Build Battle">
                                 <div class="game-link__desc">
                                     Minecraft: <br> Build Battle
                                 </div>
                             </a>
-                            <a href="#" class="game-link">
+                            <a href="#" class="game-link swiper-slide">
                                 <img src="images/games_gallery/Fortnite.jpg" alt="Fortnite">
                                 <div class="game-link__desc">
                                     Fortnite
                                 </div>
                             </a>
+                            <a href="#" class="game-link swiper-slide">
+                                <img src="images/games_gallery/minecraft.jpg" alt="Minecraft Build Battle">
+                                <div class="game-link__desc">
+                                    Minecraft: <br> Build Battle
+                                </div>
+                            </a>
+                            <a href="#" class="game-link swiper-slide">
+                                <img src="images/games_gallery/Fortnite.jpg" alt="Fortnite">
+                                <div class="game-link__desc">
+                                    Fortnite
+                                </div>
+                            </a>
+                            <!-- <a href="#" class="game-link swiper-slide">
+                                <img src="images/games_gallery/minecraft.jpg" alt="Minecraft Build Battle">
+                                <div class="game-link__desc">
+                                    Minecraft: <br> Build Battle
+                                </div>
+                            </a>
+                            <a href="#" class="game-link swiper-slide">
+                                <img src="images/games_gallery/Fortnite.jpg" alt="Fortnite">
+                                <div class="game-link__desc">
+                                    Fortnite
+                                </div>
+                            </a> -->
                         </div>
                         <div class="games-carousel__controls">
                             <button class="games-carousel__control games-carousel__control--prev">
@@ -144,7 +169,7 @@
                                     <div class="event__name">Полуфиналы</div>
                                 </div>
                             </li>
-                            <li class="event">
+                            <li class="event swiper-slide">
                                 <img src="./images/shedule/console.png" alt="">
                                 <div class="event__info">
                                     <div class="event__date">15 марта</div>
@@ -270,6 +295,7 @@
             </footer>
         </main>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

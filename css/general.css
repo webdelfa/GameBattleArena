@@ -84,6 +84,8 @@ img {
     font-style: normal;
     color: #FFF;
     overflow: hidden;
+    background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 54, 155, 0.685) 0%, rgba(3, 6, 25, 0.69) 100%);
+    background-position: 10px 10px;
 }
 
 .container {

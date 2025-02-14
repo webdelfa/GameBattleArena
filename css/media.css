@@ -97,6 +97,13 @@
 }
 
 @media (max-width: 425px) {
+    html {
+        font-size: 16px;
+    }
+
+    .content-text {
+        font-size: 1rem;
+    }
 
     /* ----------------- HEADER ------------------ */
     .header {
@@ -164,6 +171,10 @@
 
     .event__name {
         font-size: 18px;
+    }
+
+    .questions {
+        font-size: 16px;
     }
 
     .footer .nav__list {

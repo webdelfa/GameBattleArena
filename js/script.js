@@ -1,43 +1,23 @@
 // ---------------------- Список игр ---------------------------------------------
-document.addEventListener('DOMContentLoaded', function () {
-    const carouselInner = document.querySelector('.games-carousel__inner');
-    const prevButton = document.querySelector('.games-carousel__control--prev');
-    const nextButton = document.querySelector('.games-carousel__control--next');
-    const items = document.querySelectorAll('.game-link');
-    const indicators = document.querySelectorAll('.games-carousel__indicator');
-
-    let currentIndex = 1; // Индекс текущего активного элемента
-
-    function updateIndicators() {
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentIndex);
-        });
-    }
-
-    function moveToEnd() {
-        const firstItem = carouselInner.firstElementChild;
-        carouselInner.appendChild(firstItem); // Перемещаем первый элемент в конец
-        currentIndex = (currentIndex + 1) % items.length; // Обновляем индекс
-        updateIndicators(); // Обновляем индикаторы
-    }
-
-    function moveToStart() {
-        const lastItem = carouselInner.lastElementChild;
-        carouselInner.insertBefore(lastItem, carouselInner.firstElementChild); // Перемещаем последний элемент в начало
-        currentIndex = (currentIndex - 1 + items.length) % items.length; // Обновляем индекс
-        updateIndicators(); // Обновляем индикаторы
-
-    }
-
-    nextButton.addEventListener('click', moveToEnd);
-    prevButton.addEventListener('click', moveToStart);
-
-    // Инициализация индикаторов
-    updateIndicators();
-
+const swiper = new Swiper('.games-carousel', {
+    loop: true, // Бесконечный цикл
+    slidesPerView: 'auto', // Количество видимых слайдов
+    // spaceBetween: 0, // Расстояние между слайдами
+    centeredSlides: true, // Центрируем слайды
+    navigation: {
+        nextEl: '.games-carousel__control--next', // Кнопка "вперёд"
+        prevEl: '.games-carousel__control--prev', // Кнопка "назад"
+    },
+    pagination: {
+        el: '.games-carousel__indicators', // Индикаторы
+        clickable: true, // Возможность клика
+        bulletClass: 'games-carousel__indicator', // Класс индикатора
+        bulletActiveClass: 'active', // Класс активного индикатора
+    },
 });
 
 // ---------------------------- Прокрутка элементов расписания ------------------------------
+
 const events = document.querySelector('.events');
 const list = document.querySelector('.events__list');
 let isDragging = false;
