@@ -70,20 +70,58 @@
 }
 
 @media(max-width: 768px) {
+    .header__container {
+        flex-direction: row-reverse;
+    }
+
     .burger {
         display: flex;
         z-index: 200;
     }
 
-    .burger+.nav {
+    .burger+.nav .nav__list {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.2s ease-in-out;
+    }
+
+    /* Анимация бургера в крестик */
+    .burger.active .burger__line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+        transform-origin: center center;
+    }
+
+    .burger.active .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .burger__line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+        transform-origin: center center;
+    }
+
+    .nav.active {
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
+        left: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
         background-color: #030619;
-        transition: right 0.3s ease-in-out;
         z-index: 150;
+        overflow: hidden;
+        height: 100vh;
+        padding-bottom: 30px;
+    }
+
+    .nav.active .nav__list {
+        display: flex;
+        padding-top: 109px;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        width: 100%;
     }
 
     .game-link {
@@ -110,7 +148,7 @@
         padding: 17px 0px 21px;
     }
 
-    .logo__icon {
+    .logo {
         width: 83px;
     }
 
@@ -140,8 +178,6 @@
         font-size: 16px;
         margin-bottom: 35px;
     }
-
-    .about__images {}
 
     .about__img {
         width: 95%;

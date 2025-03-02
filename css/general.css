@@ -84,8 +84,6 @@ img {
     font-style: normal;
     color: #FFF;
     overflow: hidden;
-    background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 54, 155, 0.685) 0%, rgba(3, 6, 25, 0.69) 100%);
-    background-position: 10px 10px;
 }
 
 .container {
@@ -96,10 +94,27 @@ img {
 
 .section {
     margin-bottom: 81px;
+    position: relative;
+    z-index: 100;
 }
 
 .section-title {
     font-size: 40px;
     font-weight: normal;
     margin-bottom: 27px;
+}
+
+.about__container::before,
+.games__container::before,
+.games__container::after,
+.form-section__container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-image: var(--bg);
+    background-size: cover;
+    z-index: -1;
 }

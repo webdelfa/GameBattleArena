@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <!-- <link rel="stylesheet" href="css/media.css"> -->
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="container header__container">
-                <a href="#!" class="logo">
-                    <svg class="logo__icon" width="108" height="38" viewBox="0 0 108 38">
-                        <use href="images/social/sprite.svg#logo"></use>
-                    </svg>
-                </a>
                 <div class="burger" id="burger">
                     <div class="burger__line"></div>
                     <div class="burger__line"></div>
                     <div class="burger__line"></div>
                 </div>
                 <nav class="nav">
+                    <a href="#!" class="logo">
+                        <svg class="logo__icon" width="108" height="38" viewBox="0 0 108 38">
+                            <use href="images/social/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__link">Главная</a>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </section>
-            <section class="games">
+            <section class="games section">
                 <div class="container games__container">
                     <h2 class="section-title">Игры турнира</h2>
                     <p class="content-text games__content-text">
@@ -158,21 +158,21 @@
                             <li class="event">
                                 <img src="./images/shedule/mouse.png" alt="">
                                 <div class="event__info">
-                                    <div class="event__date">3 марта</div>
+                                    <time class="event__date" datetime="2025-03-03">3 марта</time>
                                     <div class="event__name">Командные матчи</div>
                                 </div>
                             </li>
                             <li class="event">
                                 <img src="./images/shedule/ВР.png" alt="">
                                 <div class="event__info">
-                                    <div class="event__date">10 марта</div>
+                                    <time class="event__date" datetime="2025-03-10">10 марта</time>
                                     <div class="event__name">Полуфиналы</div>
                                 </div>
                             </li>
                             <li class="event swiper-slide">
                                 <img src="./images/shedule/console.png" alt="">
                                 <div class="event__info">
-                                    <div class="event__date">15 марта</div>
+                                    <time class="event__date" datetime="2025-03-15">15 марта</time>
                                     <div class="event__name">Гранд-финал</div>
                                 </div>
                             </li>
@@ -242,58 +242,58 @@
                     </ul>
                 </div>
             </section>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer__content">
-                        <a href="" class="logo">
-                            <svg class="logo__icon" width="108" height="38" viewBox="0 0 108 38">
-                                <use href="images/social/sprite.svg#logo"></use>
-                            </svg>
-                        </a>
-                        <div class="footer__content-center">
-                            <nav class="nav footer__nav">
-                                <ul class="nav__list">
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link">Главная</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link active">Игроки</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link">Команды</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link">О нас</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <ul class="social-list">
-                                <li class="social-item">
-                                    <a href="#" class="social-link">
-                                        <svg class="social-icon" width="26" height="25" viewBox="0 0 26 25">
-                                            <use href="images/social/sprite.svg#vk"></use>
-                                        </svg>
-                                    </a>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <a href="" class="logo">
+                        <svg class="logo__icon" width="108" height="38" viewBox="0 0 108 38">
+                            <use href="images/social/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <div class="footer__content-center">
+                        <nav class="nav footer__nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Главная</a>
                                 </li>
-                                <li class="social-item">
-                                    <a href="#" class="social-link">
-                                        <svg class="social-icon" width="26" height="25" viewBox="0 0 26 25">
-                                            <use href="images/social/sprite.svg#discord"></use>
-                                        </svg>
-                                    </a>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link active">Игроки</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Команды</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">О нас</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="contact">
-                            <a href="mailto:support@gamebattlearena.com"
-                                class="contact__email">support@gamebattlearena.com</a>
-                            <a href="tel:+79001234567" class="contact__phone">+7 (900) 123-45-67</a>
-                        </div>
+                        </nav>
+                        <ul class="social-list">
+                            <li class="social-item">
+                                <a href="#" class="social-link">
+                                    <svg class="social-icon" width="26" height="25" viewBox="0 0 26 25">
+                                        <use href="images/social/sprite.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link">
+                                    <svg class="social-icon" width="26" height="25" viewBox="0 0 26 25">
+                                        <use href="images/social/sprite.svg#discord"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="footer__copyright">© 2025 GameBattle Arena. Все права защищены.</div>
+                    <div class="contact">
+                        <a href="mailto:support@gamebattlearena.com"
+                            class="contact__email">support@gamebattlearena.com</a>
+                        <a href="tel:+79001234567" class="contact__phone">+7 (900) 123-45-67</a>
+                    </div>
                 </div>
-            </footer>
-        </main>
+                <div class="footer__copyright">© 2025 GameBattle Arena. Все права защищены.</div>
+            </div>
+        </footer>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>

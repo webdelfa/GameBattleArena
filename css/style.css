@@ -1,3 +1,7 @@
+:root {
+    --bg: radial-gradient(50% 50% at 50% 50%, rgba(0, 54, 155, 0.5) 0%, rgba(3, 6, 25, 0.05) 100%);
+}
+
 /* ----------------- HEADER ------------------ */
 .header {
     background-color: rgba(3, 6, 25, 0.19);
@@ -18,7 +22,7 @@
 }
 
 .logo {
-    flex: 0 0 108px;
+    width: 108px;
 }
 
 .logo__icon {
@@ -27,27 +31,33 @@
     width: 100%;
 }
 
-.logo__icon:hover {
-    fill: #79A8FF;
+@media (hover:hover) {
+    .logo__icon:hover {
+        fill: #79A8FF;
+    }
 }
 
-.logo__img {}
-
-.nav__item {}
+@media (hover:none) {
+    .logo__icon:active {
+        fill: #79A8FF;
+    }
+}
 
 .header .nav__link {
     font-size: 24px;
     transition: color 0.3s;
 }
 
-.nav {}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 .nav__list {
     display: flex;
     gap: 34px 25px;
 }
-
-.nav__item {}
 
 .nav__link {
     text-decoration: none;
@@ -57,8 +67,10 @@
     transition: color 0.3s;
 }
 
-.nav__link:hover {
-    color: #79A8FF;
+@media (hover:hover) {
+    .nav__link:hover {
+        color: #79A8FF;
+    }
 }
 
 .nav__link:active {
@@ -81,44 +93,27 @@
     height: 5px;
     border-radius: 3px;
     background-color: #fff;
+    transition: transform 0.3s;
 }
 
-/* Анимация бургера в крестик */
-.burger.active .burger__line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-    transform-origin: center center;
+.main {
+    background-image: var(--bg);
+    background-position: center -130px;
+    background-size: 900px 900px;
+    background-repeat: no-repeat;
 }
-
-.burger.active .burger__line:nth-child(2) {
-    opacity: 0;
-}
-
-.burger.active .burger__line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-    transform-origin: center center;
-}
-
-.nav.active {
-    right: 0;
-    left: 0;
-}
-
-.nav.active .nav__list {
-    padding-top: 109px;
-    flex-direction: column;
-    text-align: center;
-}
-
-
-.main {}
 
 /* ----------------- WELCOME ------------------ */
 
 .welcome {
     background-image: url("../images/welcome-bg.png");
+    background-position: top center;
     background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 137px;
     min-height: 550px;
+    /* Чтобы градиентный круги секции about не перекрывали ссылку */
+    z-index: 120;
 }
 
 .welcome__container {
@@ -135,6 +130,7 @@
 .title {
     color: #FFFF;
     -webkit-text-stroke: 1px #0072FF;
+    text-shadow: 0 0 9px #0072ff;
     font-weight: 900;
     font-size: 76px;
     margin-bottom: 10px;
@@ -153,31 +149,44 @@
     text-decoration: none;
     border: 2px solid #0072FF;
     background: linear-gradient(to bottom, #030619, #00369B);
-    box-shadow: 0 0 0 2px #FFFF, 0 0 0 4px #0072FF, 0 0 10px 10px rgba(0, 115, 255, 0.5), inset 0 0 10px 4px rgba(0, 115, 255, 0.5);
+    box-shadow: 0 0 0 2px #FFFF, 0 0 0 4px #0072ff, 0 0 10px 10px rgba(0, 115, 255, 0.5);
     padding: 10px 26px;
     border-radius: 100px;
     transition: all 0.3s;
 }
 
-.welcome-link:hover {
-    color: #79A8FF;
-    border-color: #79A8FF;
-    box-shadow: 0 0 0 2px #FFFF, 0 0 0 4px #79A8FF, 0 0 10px 10px rgba(0, 115, 255, 0.5), inset 0 0 8px 8px rgba(0, 115, 255, 0.5);
+@media (hover:hover) {
+    .welcome-link:hover {
+        /* color: #79A8FF; */
+        /* border-color: #79A8FF; */
+        background: linear-gradient(to bottom, #00369B, #030619);
+        /* Этот код изменит градиент и увеличит свечение при наведении на элемент. */
+        box-shadow: 0 0 0 2px #FFFF, 0 0 0 4px #0072FF, 0 0 15px 15px rgba(0, 115, 255, 0.8);
+    }
 }
 
-.welcome__link:active {
-    color: #247FFF;
-    border-color: #247FFF;
-    box-shadow: 0 0 0 2px #FFFF, 0 0 0 4px #247FFF, 0 0 5px 5px rgba(0, 115, 255, 0.5), inset 0 0 5px 5px rgba(0, 115, 255, 0.5);
-}
 
-.welcome__img {}
+.welcome-link:active {
+    /* color: #247FFF;
+    border-color: #247FFF; */
+    opacity: 0.6;
+    transform: scale(0.98);
+}
 
 /* ----------------- ABOUT ------------------ */
 
-.about {}
+.about {
+    z-index: 110;
+}
 
-.about__container {}
+.about__container {
+    position: relative;
+}
+
+.about__container::before {
+    left: -50%;
+    bottom: -50%;
+}
 
 .content-text {
     font-weight: 100;
@@ -202,11 +211,20 @@
 
 /* ----------------- GAMES ------------------ */
 
-.games {}
+.games__container {
+    position: relative;
+    z-index: 100;
+}
 
-.games__container {}
+.games__container::before {
+    top: 0;
+    left: -40%;
+}
 
-.content-text {}
+.games__container::after {
+    bottom: 0;
+    right: -40%;
+}
 
 .games__content-text {
     margin-bottom: 36px;
@@ -290,8 +308,6 @@
     stroke: #79A8FF;
 }
 
-.games-carousel__control--prev {}
-
 .games-carousel__indicators {
     display: flex;
     column-gap: 15px;
@@ -332,13 +348,11 @@
     border-color: white;
 }
 
-.games-carousel__control--next {}
-
 /* ----------------- SHEDULE ------------------- */
 
-.shedule {}
-
-.container {}
+.shedule {
+    z-index: 120;
+}
 
 .events {
     overflow: hidden;
@@ -390,8 +404,6 @@
     align-items: center;
 }
 
-.event__info {}
-
 .event__date {
     font-size: 36px;
     color: #FFFFFF;
@@ -403,16 +415,19 @@
     color: #79A8FF;
 }
 
-
 /* ----------------------- FORM ------------------------ */
-.form-section {}
-
 .form-section__container {
     background: linear-gradient(90deg, #030619 -27.53%, #00369B 168.19%);
     border: 1px solid #082872;
     box-shadow: 0px 4px 46.8px rgba(0, 0, 0, 0.14);
     border-radius: 20px;
     padding: 48px 65px 46px;
+    position: relative;
+}
+
+.form-section__container::after {
+    top: -60%;
+    right: -25%;
 }
 
 .form__header {
@@ -482,19 +497,9 @@
 
 /* -------------------- QUESTIONS -------------------- */
 
-.questions {}
-
-.questions-container {}
-
 .questions__title {
     margin-bottom: 38px;
 }
-
-.questions__list {}
-
-.questions-accordion {}
-
-.questions-accordion__item {}
 
 .questions-accordion__header {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #FFFFFF;
@@ -576,14 +581,10 @@
     flex: 1;
 }
 
-.footer__nav {}
-
 .footer .nav__list {
     height: 100%;
     align-items: center;
 }
-
-.nav__item {}
 
 .footer .nav__link {
     font-size: 16px;
@@ -604,8 +605,6 @@
     column-gap: 13px;
 }
 
-.social-item {}
-
 .social-icon {
     fill: rgba(255, 255, 255, 0.5);
     transition: fill 0.3s;
@@ -624,8 +623,6 @@
 .contact__email {
     margin-bottom: 6px;
 }
-
-.contact__phone {}
 
 .footer__copyright {
     text-align: center;
